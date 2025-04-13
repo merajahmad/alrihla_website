@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Al-Rihla Learning</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f8f9fa;
+    }
+
+.hero {
+  background: url('assets/images/alrihla_background.png') center/cover no-repeat;
+  background-color: #4b2e1e; /* Picked a warm brown from the book background */
+  height: 100vh;
+  position: relative;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+
+
+    .overlay {
+      background-color: rgba(0,0,0,0.3);
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      color: white;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+    }
+
+    .highlight {
+      background-color: #34c759; /* green highlight */
+      color: #000;
+      padding: 0 10px;
+      border-radius: 5px;
+    }
+
+    .nav-link {
+      color: white !important;
+    }
+
+    .info-boxes {
+      background-color: #fff;
+      color: black;
+      padding: 20px;
+      text-align: center;
+      margin-top: -60px;
+      z-index: 10;
+      position: relative;
+    }
+
+    .info-boxes .box {
+      background: #5C1E17;
+      padding: 30px 20px;
+      margin: 10px;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .info-boxes .box h5 {
+      color: #FBE8D3;
+    }
+
+    .info-boxes .box:hover {
+      background: #34c759;
+      color: #000;
+    }
+
+  /* Set background of each subject item */
+  #courses .accordion-item {
+    background-color: #fffaf3;
+    border: 1px solid #dee2e6; /* Keeps the separators visible */
+  }
+
+  /* Set background of body/content when expanded */
+  #courses .accordion-body {
+    background-color: #fff5eb;
+  }
+
+  /* Optional: keep header buttons styled nicely */
+  #courses .accordion-button {
+    background-color: #fffaf3;
+    color: #5C1E17; /* Matching your warm text tone */
+  }
+
+  /* Optional: style the active/open state */
+  #courses .accordion-button:not(.collapsed) {
+    box-shadow: none;
+  }
+  section h2 {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #5C1E17; /* Optional: match your existing heading color */
+  }
+
+
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
+    <a class="navbar-brand" href="#about">
+      <img src="assets/images/alrihla_logo.jpg" alt="Al-Rihla Logo" height="40" class="me-2">
+      AL-RIHLA
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <!-- <li class="nav-item"><a class="nav-link" href="#">Home</a></li> -->
+        <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="#courses">Courses</a></li>
+        <li class="nav-item"><a class="nav-link" href="#join">Register</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+      <!-- Email Display in Navbar -->
+  <div class="d-flex flex-column align-items-center ms-3 text-white">
+    <i class="bi bi-envelope-fill" style="font-size: 1.2rem;"></i>
+    <a href="mailto:Alrihlacademy@gmail.com" class="text-white text-decoration-none" style="font-size: 0.9rem;">Alrihlacademy@gmail.com</a>
+  </div>
+
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="overlay">
+     <!-- <h1>Get your <span class="highlight">Education</span> today!</h1> -->
+      <h1>Welcome to AL-RIHLA Academy</h1>
+      <p class="lead mt-3">Al-Rihla provides confidence to compete with the students of schools and colleges<br> in different competitive examinations</p>
+    </div>
+  </div>
+
+  <!-- Info Boxes -->
+  <div class="info-boxes d-flex justify-content-center flex-wrap">
+    <div class="box col-md-3">
+      <h5>Our Courses</h5>
+      <a href="#courses" class="text-warning">View More</a>
+    </div>
+  </div>
+
+  <!-- Vision Section -->
+  <section id="vision" style="padding: 60px 20px; background-color: #fffaf3;">
+    <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+      <h2 style="color: #5C1E17;">Vision Statement</h2>
+      <p style="font-size: 1.1rem; line-height: 1.6; color: #333; text-align: center;">
+        Empowering Madrasa Students to Thrive in Modern Society  
+      </p>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section id="about" style="padding: 60px 20px; background-color: #fff5eb;">
+    <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+      <h2 style="color: #5C1E17;">About Al-Rihla Academy</h2>
+      <p style="font-size: 1.1rem; line-height: 1.6; color: #333; text-align: justify;">
+        Al-Rihla Academy is operated under a non-profit Al-Rihla Foundation. Al-Rihla Academy is a pioneering institution dedicated to bridging the gap between traditional Madrasa education and contemporary academic excellence. Our mission is to equip Madarsa students with the knowledge, skills, and confidence needed to achieve economic independence, intellectual growth, and meaningful contributions to society.  
+      </p>
+    </div>
+  </section>
+
+  <!-- Our Approach Section -->
+  <section id="approach" style="padding: 60px 20px; background-color: #fffaf3;">
+    <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+      <h2 style="color: #5C1E17;">Our Approach</h2>
+      <p style="font-size: 1.1rem; line-height: 1.6; color: #333; text-align: justify;">
+        We offer a transformative curriculum that harmonizes modern subjects with the values instilled by Madarsas. We prepare students to excel in modern higher education and competitive professional environments. Our holistic programs emphasize: 
+      </p>
+      <ul style="font-size: 1.1rem; line-height: 1.8; color: #333; text-align: justify; list-style-type: disc; padding-left: 20px;">
+        <li><b>Critical Thinking & Innovation:</b> Cultivating problem-solving skills for real-world challenges.</li>
+        <li><b>Practical Competencies: </b> Training in digital literacy, communication, and leadership.</li>
+        <li><b>Ethical Leadership: </b> Grounding students in values that inspire community-driven impact.</li>
+
+      </ul>
+    </div>
+  </section>
+
+   <!-- Our Targeted Students Section -->
+  <section id="targeted-students" style="padding: 60px 20px; background-color: #fff5eb;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 class="text-center mb-4" style="color: #5C1E17;">Unlocking Admissions / Exams<span title="We help students to prepare for college entrance exams and competetive / final exams. However, we do not provide any approved certificate." style="font-size: 0.8em; cursor: help;">*</span> </h2>
+      <ul style="font-size: 1.1rem; line-height: 1.8; color: #333; text-align: justify; list-style-type: disc; padding-left: 20px;">
+        <li>B.A. / M.A. in Political Science / History / Geography / Economics / Philosophy / Psychology / journalism / LLB.</li>
+        <li>CTET / CUET / SSC / State PSC / UPSC in the future.</li>
+        <li>Self Awareness / Personality Development</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Building Bridges Section -->
+  <section id="bridges" style="padding: 60px 20px; background-color: #fffaf3;">
+    <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+      <h2 style="color: #5C1E17;">Building Bridges to Opportunity</h2>
+      <p style="font-size: 1.1rem; line-height: 1.6; color: #333; text-align: justify;">
+        Al-Rihla Academy serves as a vital bridge, between Madrasa education and modern education guiding students toward enrollment in universities and colleges where they can pursue degrees aligned with global opportunities. Through personalized mentorship, career counseling, and partnerships with academic institutions, we ensure students seamless transition into higher education and emerge as resilient, forward-thinking leaders.   
+      </p>
+    </div>
+  </section>
+
+  <!-- Courses Section -->
+  <section id="courses" style="padding: 60px 20px; background-color: #fff5eb;">
+    <div class="container">
+      <h2 class="text-center mb-4" style="color: #5C1E17;">Courses</h2>
+      <div class="accordion" id="coursesAccordion">
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingMath">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMath">
+              Maths
+            </button>
+          </h2>
+          <div id="collapseMath" class="accordion-collapse collapse" data-bs-parent="#coursesAccordion">
+            <div class="accordion-body">
+              <ul>
+                <li>Whole Numbers</li>
+                <li>Integers</li>
+                <li>Fractions</li>
+                <li>Decimals</li>
+                <li>Basic Geometry</li>
+                <li>Basic Algebra</li>
+                <li>Percentage</li>
+                <li>Average</li>
+                <li>Ratio</li>
+                <li>And More</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingBio">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBio">
+              Biology
+            </button>
+          </h2>
+          <div id="collapseBio" class="accordion-collapse collapse" data-bs-parent="#coursesAccordion">
+            <div class="accordion-body">
+              <p>Topics coming soon...</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingPhysics">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePhysics">
+              Physics
+            </button>
+          </h2>
+          <div id="collapsePhysics" class="accordion-collapse collapse" data-bs-parent="#coursesAccordion">
+            <div class="accordion-body">
+              <p>Topics coming soon...</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingChem">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseChem">
+              Chemistry
+            </button>
+          </h2>
+          <div id="collapseChem" class="accordion-collapse collapse" data-bs-parent="#coursesAccordion">
+            <div class="accordion-body">
+              <p>Topics coming soon...</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingHistory">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHistory">
+              History
+            </button>
+          </h2>
+          <div id="collapseHistory" class="accordion-collapse collapse" data-bs-parent="#coursesAccordion">
+            <div class="accordion-body">
+              <ul>
+                <li>Background</li>
+                <li>Purpose</li>
+                <li>Human Evolution</li>
+                <li>Noble Planet and Humans</li>
+                <li>Early civilizations: Mesopotamians, Indus Valley, etc.</li>
+                <li>Kingdoms and empires: Mauryas, Guptas, Mughals, Roman & Ottoman</li>
+                <li>Colonization and its global impact</li>
+                <li>European exploitation and cultural imposition</li>
+                <li>Decolonization</li>
+                <li>India’s Independence</li>
+                <li>Post-independence</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingPol">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePol">
+              Political Science
+            </button>
+          </h2>
+          <div id="collapsePol" class="accordion-collapse collapse" data-bs-parent="#coursesAccordion">
+            <div class="accordion-body">
+              <ul>
+                <li>What is a government?</li>
+                <li><b>Forms of government:</b> monarchy, democracy, etc.</li>
+                <li><b>Democratic elements:</b> legislature, executive, judiciary</li>
+                <li>Roles of Government</li>
+                <li><b>Ideologies:</b> liberalism, idealism, socialism, etc.</li>
+                <li>Constitution making, Electoral politics</li>
+                <li>Constitutional & non-constitutional bodies (UPSC, CBI, etc.)</li>
+                <li>Political parties, power sharing</li>
+                <li><b>Social themes:</b> gender, religion, caste</li>
+                <li><b>Political ideas:</b> freedom, rights, citizenship</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingGeo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGeo">
+              Geography
+            </button>
+          </h2>
+          <div id="collapseGeo" class="accordion-collapse collapse" data-bs-parent="#coursesAccordion">
+            <div class="accordion-body">
+              <ul>
+                <li>Earth in the solar system</li>
+                <li>Motion of Earth</li>
+                <li>Physiography of the Earth</li>
+                <li>Understanding maps</li>
+                <li>Lithosphere</li>
+                <li>Atmosphere</li>
+                <li>Hydrosphere</li>
+                <li>Life supporting elements, Properties of air, water & soil</li>
+                <li>Natural resources, minerals</li>
+                <li>Climate</li>
+                <li>Human settlements</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingEcon">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEcon">
+              Economy
+            </button>
+          </h2>
+          <div id="collapseEcon" class="accordion-collapse collapse" data-bs-parent="#coursesAccordion">
+            <div class="accordion-body">
+              <ul>
+                <li>Working of the economic system</li>
+                <li>Types of economies: liberal, social, welfare</li>
+                <li>Monetary policy</li>
+                <li>Fiscal policy</li>
+                <li>Exchange rate</li>
+                <li>Balance of payment</li>
+                <li>Sectors of economy: primary, secondary, tertiary</li>
+                <li>Globalization & world economy</li>
+                <li>Developed vs. developing economies</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Join Us Section -->
+  <section id="join" style="padding: 60px 20px; background-color: #fffaf3;">
+    <div class="container">
+      <h2 class="text-center mb-4" style="color: #5C1E17;">Join Us in Shaping Futures</h2>
+      <p style="font-size: 1.1rem; line-height: 1.6; color: #333; text-align: justify;">
+        Together, we empower the next generation to unlock their potential, embrace lifelong learning, and thrive in an ever-evolving world.   
+      </p>
+
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <form id="leadForm">
+            <div class="mb-3">
+              <input name="studentName" class="form-control" placeholder="Student Name" required />
+            </div>
+            <div class="mb-3">
+              <input name="parentName" class="form-control" placeholder="Mother/Father Name" required />
+            </div>
+            <div class="mb-3">
+              <input type="email" name="email" class="form-control" placeholder="Email" required />
+            </div>
+            <div class="mb-3">
+              <input type="tel" name="mobileNumber" class="form-control" placeholder="Mobile Number" pattern="[6-9][0-9]{9}" />
+
+            </div>
+	    <div class="form-floating mb-3">
+  		<input type="date" class="form-control" id="dob" name="dob" max="2024-04-15" placeholder="Date of Birth">
+  		<label for="dob">Date of Birth</label>
+	    </div>
+            <div class="mb-3">
+              <select name="gender" class="form-control" required>
+                <option value="">Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <textarea name="qualification" class="form-control" rows="3" placeholder="Qualification" required></textarea>
+            </div>
+            <button class="btn btn-dark w-100">Register</button>
+          </form>
+          <p id="formStatus" class="mt-3 text-success d-none">Form submitted successfully!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- Contact Us Section -->
+<section id="contact" style="padding: 60px 20px; background-color: #fff5eb;">
+  <div class="container text-center">
+    <h2 style="color: #5C1E17; font-family: 'Playfair Display', serif;">Contact Us</h2>
+    <p class="mt-4" style="font-size: 1.1rem;">
+      <i class="fas fa-phone-alt" style="margin-right: 10px; color: #5C1E17;"></i>
+      +91-8920265750
+    </p>
+    <p style="font-size: 1.1rem;">
+      <i class="fas fa-envelope" style="margin-right: 10px; color: #5C1E17;"></i>
+      Alrihlacademy@gmail.com
+    </p>
+  </div>
+</section>
+<!-- Footer -->
+<footer style="background-color: #5C1E17; color: white; padding: 20px 0; text-align: center;">
+  <div class="container">
+    <p style="margin: 0;">&copy; 2025 Al-Rihla Academy. All Rights Reserved.</p>
+    <p style="margin: 0;">* We help students to prepare for college entrance exams and competetive / final exams. <br>However, we do not provide any approved certificate.</p>
+  </div>
+</footer>
+
+
+  <!-- Scripts -->
+<script>
+  const scriptURL = "https://script.google.com/macros/s/AKfycbzjuQVOS00OB94JV58JhRq4iTgQQooJwAQMTwP_J_xprPh82Ydaifjui5TXb7dAk_y8wQ/exec";
+  const form = document.getElementById("leadForm");
+  const status = document.getElementById("formStatus");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const formData = {
+      studentName: form.studentName.value,
+      parentName: form.parentName.value,
+      email: form.email.value,
+      mobileNumber: form.mobileNumber.value,
+      dob: form.dob.value,
+      gender: form.gender.value,
+      qualification: form.qualification.value
+    };
+
+    try {
+      const res = await fetch(scriptURL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData)
+      });
+
+      if (res.ok) {
+        form.reset();
+        status.classList.remove("d-none");
+        status.textContent = "Form submitted successfully!";
+        status.classList.remove("text-danger");
+        status.classList.add("text-success");
+      } else {
+        status.textContent = "Failed to submit. Please try again.";
+        status.classList.remove("d-none");
+        status.classList.remove("text-success");
+        status.classList.add("text-danger");
+      }
+    } catch (err) {
+      status.textContent = "Error submitting form.";
+      status.classList.remove("d-none");
+      status.classList.remove("text-success");
+      status.classList.add("text-danger");
+      console.error(err);
+    }
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
